@@ -1,0 +1,26 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: TL-NMS-dc2
+IP: 172.26.20.254
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    2350631       sshd                          ssh
+53       tcp    2345650       systemd-resolve               domain
+53       udp    2345650       systemd-resolve               domain
+80       tcp    2664023,2664024,2664025,2664026,2664027 nginx                         http
+123      udp    1108520       ntpd                          ntp
+161      udp    2522347       snmpd                         snmp
+873      tcp    703           rsync                         rsync
+1514     udp    997           java                          (unknown)
+3000     tcp    1270          grafana                       (unknown)
+3306     tcp    1088154       mysqld                        mysql
+5353     udp    2522321       avahi-daemon                  mdns
+9000     tcp    997           java                          (unknown)
+9200     tcp    689           java                          (unknown)
+9300     tcp    689           java                          (unknown)
+10050    tcp    4193864       zabbix_agent2                 zabbix-agent
+10051    tcp    1277,1297,1298,1454,1455,1456,1457,1458,1459,1460,1461,1462,1463,1464,1465,1466,1467,1469,1471,1472,1474,1475,1477,1478,1479,1480,1481,1482,1483,1484,1487,1488,1489,1490,1496,1497,1498,1500,1501,1502,1503,1504,1505,1506,1507,1508,1509,1510,1511,1512,1514,1515,1516,1517,1518,1519,1520,1521 zabbix_server                 zabbix-trapper
+27017    tcp    694           mongod                        (unknown)
+33060    tcp    1088154       mysqld                        (unknown)
+41189    udp    2522321       avahi-daemon                  (unknown)
+41982    udp    2522321       avahi-daemon                  (unknown)

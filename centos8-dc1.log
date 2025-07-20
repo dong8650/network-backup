@@ -1,0 +1,18 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: Centos8-dc1
+IP: 200.200.200.104
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    1095          sshd                          ssh
+53       tcp    1901          dnsmasq                       domain
+53       udp    1901          dnsmasq                       domain
+67       udp    1901          dnsmasq                       bootps
+111      tcp    1,960         rpcbind,systemd               sunrpc
+111      udp    1,960         rpcbind,systemd               sunrpc
+323      udp    1013          chronyd                       (unknown)
+631      tcp    1172          cupsd                         ipp
+5353     udp    1019          avahi-daemon                  mdns
+10050    tcp    1092          zabbix_agent2                 zabbix-agent
+46744    udp    1019          avahi-daemon                  (unknown)
+51238    udp    1019          avahi-daemon                  (unknown)

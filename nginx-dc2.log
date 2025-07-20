@@ -1,0 +1,8 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: nginx-dc2
+IP: 7.7.7.111
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    730           sshd                          ssh
+323      udp    715           chronyd                       (unknown)

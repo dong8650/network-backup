@@ -1,0 +1,10 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: centos7-dc1
+IP: 200.200.200.103
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    981           sshd                          ssh
+25       tcp    1238          master                        smtp
+323      udp    735           chronyd                       (unknown)
+10050    tcp    979           zabbix_agent2                 zabbix-agent

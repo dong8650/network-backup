@@ -1,0 +1,9 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: AlmaLinux9-dc1
+IP: 200.200.200.105
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    714           sshd                          ssh
+323      udp    695           chronyd                       (unknown)
+10050    tcp    716           zabbix_agent2                 zabbix-agent

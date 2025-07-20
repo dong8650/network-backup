@@ -1,0 +1,10 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: Ubuntu22-dc1
+IP: 200.200.200.102
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    917           sshd                          ssh
+53       tcp    829           systemd-resolve               domain
+53       udp    829           systemd-resolve               domain
+10050    tcp    869           zabbix_agent2                 zabbix-agent

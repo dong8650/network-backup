@@ -1,0 +1,17 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: arkime-dc2
+IP: 7.7.7.254
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    3769867       sshd                          ssh
+53       tcp    2643670       systemd-resolve               domain
+53       udp    2643670       systemd-resolve               domain
+68       udp    2643661       systemd-network               bootpc
+5353     udp    42047         avahi-daemon                  mdns
+8005     tcp    1245          node                          (unknown)
+9200     tcp    42093         java                          (unknown)
+9300     tcp    42093         java                          (unknown)
+10050    tcp    2771248       zabbix_agent2                 zabbix-agent
+52714    udp    42047         avahi-daemon                  (unknown)
+60097    udp    42047         avahi-daemon                  (unknown)
