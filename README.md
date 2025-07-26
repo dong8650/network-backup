@@ -47,5 +47,12 @@ rm -f "$INVENTORY_FILE"
 cd /etc/ansible/results
 git config --global --add safe.directory /etc/ansible/results/nw-backup
 git add .
+
+📂 백업 경로 구조
+/etc/ansible/results/nw-backup/
+  └── 20250726-213416/
+        ├── c8000v-dc1_20250726-213416.cfg
+        ├── ...
+
 git commit -m "자동 백업: ${TIMESTAMP}" || echo "변경 사항 없음"
 git push origin main
