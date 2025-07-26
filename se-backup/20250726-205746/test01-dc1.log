@@ -1,0 +1,20 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: test01-dc1
+IP: 200.200.200.253
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    4129794       sshd                          ssh
+53       tcp    825,1810389   named,systemd-resolve         domain
+53       udp    825,1810389   named,systemd-resolve         domain
+80       tcp    3429876,3429877,3429878,3429879,3429880 nginx                         http
+123      udp    120498        ntpd                          ntp
+161      udp    3429883       snmpd                         snmp
+953      tcp    825           named                         (unknown)
+5353     udp    3429858       avahi-daemon                  mdns
+5432     tcp    3066330       postgres                      postgresql
+8080     tcp    3429876,3429877,3429878,3429879,3429880 nginx                         http-alt
+10050    tcp    2488401       zabbix_agent2                 zabbix-agent
+10051    tcp    931,942,943,950,951,952,954,955,956,957,961,962,964,966,967,968,970,974,975,978,980,981,982,983,984,988,989,990,991,992,993,994,995,996,997,999,1001,1002,1003,1004,1005,1010,1018,1027,1028,1041,1044,1045,1048,1049,1050 zabbix_server                 zabbix-trapper
+43307    udp    3429858       avahi-daemon                  (unknown)
+50165    udp    3429858       avahi-daemon                  (unknown)

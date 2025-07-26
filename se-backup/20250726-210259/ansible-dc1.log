@@ -1,0 +1,10 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: Ansible-dc1
+IP: 200.200.200.119
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    806           sshd                          ssh
+323      udp    796           chronyd                       (unknown)
+8080     tcp    16894         java                          webcache
+10050    tcp    810           zabbix_agent2                 zabbix-agent
