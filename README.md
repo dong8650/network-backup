@@ -46,6 +46,8 @@ git config --global --add safe.directory /etc/ansible/results/nw-backup
 git add .
 git commit -m "자동 백업: ${TIMESTAMP}" || echo "변경 사항 없음"
 git push origin main
+\```
+
 📁 백업 결과 저장 구조
 모든 백업 파일은 타임스탬프 기반 디렉토리에 저장됨
 
