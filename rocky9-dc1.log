@@ -5,7 +5,7 @@ IP: 200.200.200.101
 PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
 -------- ------ ------------- ----------------------------- ----------------
 22       tcp    766           sshd                          ssh
-80       tcp    834,835,836   nginx                         http
+80       tcp    823783,823784,823785 nginx                         http
 323      udp    744           chronyd                       (unknown)
 5432     tcp    787           postmaster                    postgres
 10050    tcp    769           zabbix_agent2                 zabbix-agent
