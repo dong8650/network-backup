@@ -48,20 +48,16 @@ git commit -m "자동 백업: ${TIMESTAMP}" || echo "변경 사항 없음"
 git push origin main
 ```
 
-
-# 📁 백업 결과 저장 구조
+## 📁 백업 결과 저장 구조
 모든 백업 파일은 타임스탬프 기반 디렉토리에 저장됨
-
-bash
-복사
-편집
 /etc/ansible/results/nw-backup/
   ├── 20250726-213416/
   │   ├── c8000v-dc1_20250726-213416.cfg
   │   ├── c8000v-dc2_20250726-213416.cfg
   │   ├── tl-fw-dc1_20250726-213416.cfg
   │   └── tl-fw-dc2_20250726-213416.cfg
-⏰ 실행 주기 예시 (Jenkins cron)
+  
+## ⏰ 실행 주기 예시 (Jenkins cron)
 주기	표현	의미
 매 1시간	H * * * *	매 시간 랜덤 분마다 실행
 매일 22시	0 22 * * *	매일 밤 10시 실행
