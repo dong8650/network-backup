@@ -10,13 +10,12 @@ Jenkins에서 주기적으로 실행되어, 구성 백업을 수행하고 GitHub
 - **Jinja2 (j2cli)**: 동적 인벤토리 파일 생성
 - **Git**: 백업 결과 버전 관리 및 GitHub에 push
 
-## 🧩 스크립트 개요
+## 🧩 백업 스크립트 개요
 
 ```bash
 #!/bin/bash
 set -e
 
-# 환경 설정
 export PATH=/usr/local/bin:$PATH
 export HOME=/var/lib/jenkins
 export SSH_AUTH_SOCK=/tmp/ssh-agent.sock
@@ -26,33 +25,42 @@ export SSH_AUTH_SOCK=/tmp/ssh-agent.sock
 eval "$(ssh-agent -a $SSH_AUTH_SOCK)"
 ssh-add $HOME/.ssh/id_rsa
 
-# j2 템플릿을 이용한 inventory 파일 생성
+# j2 템플릿 → 인벤토리 생성
 INVENTORY_FILE="$WORKSPACE/nw-temp-inventory.ini"
 j2 --format=env /etc/ansible/inventory/nw-inventory.j2 > "$INVENTORY_FILE"
 
-# 백업 경로 생성
+# 백업 디렉토리 생성
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 BACKUP_DIR="/etc/ansible/results/nw-backup/${TIMESTAMP}"
 mkdir -p "$BACKUP_DIR"
 
-# Ansible 실행
+# 구성 백업 실행
 ansible-playbook -i "$INVENTORY_FILE" \
   /etc/ansible/roles/config-backup/playbook.yml \
   -e "backup_dir=${BACKUP_DIR}"
 
-# 임시 파일 정리
+# 정리 및 결과 업로드
 rm -f "$INVENTORY_FILE"
-
-# Git 커밋 및 푸시
 cd /etc/ansible/results
 git config --global --add safe.directory /etc/ansible/results/nw-backup
 git add .
-
-📂 백업 경로 구조
-/etc/ansible/results/nw-backup/
-  └── 20250726-213416/
-        ├── c8000v-dc1_20250726-213416.cfg
-        ├── ...
-
 git commit -m "자동 백업: ${TIMESTAMP}" || echo "변경 사항 없음"
 git push origin main
+📁 백업 결과 저장 구조
+모든 백업 파일은 타임스탬프 기반 디렉토리에 저장됨
+
+bash
+복사
+편집
+/etc/ansible/results/nw-backup/
+  ├── 20250726-213416/
+  │   ├── c8000v-dc1_20250726-213416.cfg
+  │   ├── c8000v-dc2_20250726-213416.cfg
+  │   ├── tl-fw-dc1_20250726-213416.cfg
+  │   └── tl-fw-dc2_20250726-213416.cfg
+⏰ 실행 주기 예시 (Jenkins cron)
+주기	표현	의미
+매 1시간	H * * * *	매 시간 랜덤 분마다 실행
+매일 22시	0 22 * * *	매일 밤 10시 실행
+매주 일요일 3시	0 3 * * 0	매주 일요일 새벽 3시 실행
+매월 1일 자정	0 0 1 * *	매월 1일 0시 실행
