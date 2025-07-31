@@ -1,0 +1,26 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: TL-NMS-dc1
+IP: 172.16.20.254
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    802731        sshd                          ssh
+53       tcp    2838056       systemd-resolve               domain
+53       udp    2838056       systemd-resolve               domain
+80       tcp    2270536,2270537,2270538,2270539,2270540 nginx                         http
+123      udp    283527        ntpd                          ntp
+161      udp    2270526       snmpd                         snmp
+873      tcp    703           rsync                         rsync
+1514     udp    983           java                          (unknown)
+3000     tcp    139756        grafana                       (unknown)
+5353     udp    2270516       avahi-daemon                  mdns
+5432     tcp    825673        postgres                      postgresql
+9000     tcp    983           java                          (unknown)
+9200     tcp    687           java                          (unknown)
+9300     tcp    687           java                          (unknown)
+10050    tcp    892562        zabbix_agent2                 zabbix-agent
+10051    tcp    154155,154159,154160,154169,154170,154171,154172,154174,154175,154176,154177,154178,154180,154183,154184,154186,154187,154189,154190,154191,154192,154194,154195,154198,154199,154200,154202,154203,154205,154206,154207,154208,154210,154212,154213,154214,154215,154217,154218,154219,154221,154223,154224,154225,154226,154227,154228,154229,154230,154232,154233,154234,154235,154236,154240,154241,154242,154252,154253,154254,154262,154264 zabbix_server                 zabbix-trapper
+27017    tcp    153791        mongod                        (unknown)
+34635    udp    2270516       avahi-daemon                  (unknown)
+38051    udp    154219        zabbix_server                 (unknown)
+58919    udp    2270516       avahi-daemon                  (unknown)
