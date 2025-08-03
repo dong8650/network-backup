@@ -1,0 +1,16 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: zbx-proxy-dc1
+IP: 200.200.200.254
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    1083550       sshd                          ssh
+53       tcp    3711864       systemd-resolve               domain
+53       udp    3711864       systemd-resolve               domain
+80       tcp    921406,921407,921408,921409,921410 nginx                         http
+123      udp    2886401       ntpd                          ntp
+5353     udp    921390        avahi-daemon                  mdns
+8086     tcp    2882          influxd                       (unknown)
+10050    tcp    122480        zabbix_agent2                 zabbix-agent
+44945    udp    921390        avahi-daemon                  (unknown)
+46218    udp    921390        avahi-daemon                  (unknown)
