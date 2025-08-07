@@ -1,0 +1,20 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: k8s-worker03-dc1
+IP: 100.100.100.213
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    815           sshd                          ssh
+53       tcp    651           systemd-resolve               domain
+53       udp    651           systemd-resolve               domain
+179      tcp    3449          bird                          bgp
+6443     tcp    1212,1240,1241 nginx                         (unknown)
+8081     tcp    1212,1240,1241 nginx                         tproxy
+9099     tcp    3125          calico-node                   (unknown)
+9100     tcp    3291121       node_exporter                 (unknown)
+10050    tcp    767           zabbix_agent2                 zabbix-agent
+10248    tcp    1073          kubelet                       (unknown)
+10249    tcp    1812          kube-proxy                    (unknown)
+10250    tcp    1073          kubelet                       (unknown)
+10256    tcp    1812          kube-proxy                    (unknown)
+43057    tcp    768           containerd                    (unknown)
