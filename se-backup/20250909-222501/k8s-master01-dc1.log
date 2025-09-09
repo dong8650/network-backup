@@ -1,0 +1,30 @@
+📦 전체 시스템 포트/프로세스 진단 시작
+HOSTNAME: k8s-master01-dc1
+IP: 100.100.100.201
+
+PORT     PROTO  PID(s)        PROCESS(es)                   SERVICE
+-------- ------ ------------- ----------------------------- ----------------
+22       tcp    493273        sshd                          ssh
+53       tcp    654           systemd-resolve               domain
+53       udp    654           systemd-resolve               domain
+111      tcp    1,3180201     rpcbind,systemd               sunrpc
+111      udp    1,3180201     rpcbind,systemd               sunrpc
+179      tcp    3367          bird                          bgp
+965      udp    3182909       rpc.statd                     (unknown)
+2379     tcp    753           etcd                          (unknown)
+2380     tcp    753           etcd                          (unknown)
+6443     tcp    1280          kube-apiserver                (unknown)
+9099     tcp    3157          calico-node                   (unknown)
+9100     tcp    1599          node_exporter                 (unknown)
+10050    tcp    151517        zabbix_agent2                 zabbix-agent
+10248    tcp    1033          kubelet                       (unknown)
+10249    tcp    1646          kube-proxy                    (unknown)
+10250    tcp    1033          kubelet                       (unknown)
+10256    tcp    1646          kube-proxy                    (unknown)
+10257    tcp    2938180       kube-controller               (unknown)
+10259    tcp    4080021       kube-scheduler                (unknown)
+43733    tcp    780           containerd                    (unknown)
+43920    udp    3182909       rpc.statd                     (unknown)
+44889    tcp    3182909       rpc.statd                     (unknown)
+50633    tcp    3182909       rpc.statd                     (unknown)
+55404    udp    3182909       rpc.statd                     (unknown)
